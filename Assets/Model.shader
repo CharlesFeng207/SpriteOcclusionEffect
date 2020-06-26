@@ -6,16 +6,14 @@
     }
     SubShader
     {
-
-
         Pass
         {
-         Stencil
-          {
-              Ref 4
-              Comp Always
-              Pass Replace
-          }
+            Stencil
+            {
+                Ref 4
+                Comp Always
+                Pass Replace
+            }
 
             Tags { "Queue" = "Geometry" }
             ZWrite On

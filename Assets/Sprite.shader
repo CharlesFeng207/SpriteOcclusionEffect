@@ -78,11 +78,11 @@ Shader "Test/Sprite"
 
 		Pass
 		{
-		   Stencil
-          {
-              Ref 4
-              Comp Equal
-          }
+		    Stencil
+            {
+                Ref 4
+                Comp Equal
+            }
 
 			CGPROGRAM
 			#pragma vertex SpriteVertEx
@@ -125,7 +125,7 @@ Shader "Test/Sprite"
 			fixed4 SpriteFragEx(v2f IN) : SV_Target
 			{
 				fixed4 col = tex2D(_MainTex, IN.texcoord);
-                col *= IN.color * _OcclusionColor;
+				col *= IN.color * _OcclusionColor;
 				return col;
 			}
 			ENDCG
